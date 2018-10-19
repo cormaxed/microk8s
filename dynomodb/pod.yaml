@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: dynomodb
+spec:
+  replicas: 1
+  selector:
+    app: dynomodb
+  template:
+    metadata:
+      name: dynomodb
+      labels:
+        app: dynomodb
+    spec:
+      containers:
+      - name: dynomodb
+        image: amazon/dynamodb-local
+        ports:
+        - containerPort: 8000
