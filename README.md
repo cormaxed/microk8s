@@ -35,8 +35,4 @@ sudo snap install aws-cli --classic
 export AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy 
 
 aws dynamodb list-tables --endpoint-url=http://hostname:30036 --region x
----
-{
-    "TableNames": []
-}
 ```
