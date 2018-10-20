@@ -7,9 +7,10 @@ metadata:
 spec:
   selector:
     app: dynamodb
-  type: ClusterIP
+  type: NodePort
   ports:
   - name: dynomodb
     port: 8000
     targetPort: 8000
+    nodePort: 30036
     protocol: TCP
