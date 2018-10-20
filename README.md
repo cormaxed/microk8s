@@ -1,4 +1,4 @@
-# Install a Kubernetes on localhost
+# Install Kubernetes on localhost
 
 ## Install On Ubuntu 18.04
 
@@ -22,6 +22,21 @@ kubectl create -f dynamodb/pod.yaml
 kubectl create -f dynamodb/service.yaml
 ``` 
 
-## Install AWS CLI
+## Install AWS Cli
 
+```
 sudo snap install aws-cli --classic
+```
+
+## Connect with AWS Cli
+
+```
+# If you don't have any AWS credentials setup dummy ones
+export AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy 
+
+aws dynamodb list-tables --endpoint-url=http://hostname:30036 --region x
+---
+{
+    "TableNames": []
+}
+```
